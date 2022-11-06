@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: 'Roboto';
+    src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+}
+
+@layer components{
+    .cityname{
+        @apply text-[30px] font-bold uppercase text-white;
+        
+      
+    }
+    .temp{
+         @apply text-[50px] font-bold uppercase  mt-[10px]  text-white-700
+    }
+    #main{
+        @apply h-[50px] w-[50px] text-red-600 text-[30px]
+    }
+    footer {
+        @apply h-[300px] w-[331px] ml-[120px] font-bold
+    }
+    .icon{
+        @apply w-[100%] text-white text-[25px] font-bold ... ring-2 ring-offset-pink-600
+    }
+
+}
+*{
+    font-family: 'Roboto';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ 
+}
+
+
+ section{
+    background: linear-gradient(90deg,rgb(3, 1, 48)0%,rgba(9,9,121,1)35%,rgb(6 125 139/85%)100%);
+} 
+h1,h2,div
+{
+    text-shadow: 2px 2px 2px #0dcaf0;
+}
+main{
+    /* background: url("https://cdn.pixabay.com/photo/2016/11/21/03/56/landscape-1844226__340.png") ; */
+     margin-top: 33px;
+    margin-left: 52px;
+    background-size: 500px; 
+    background: url("https://media.istockphoto.com/photos/retro-futuristic-city-flythrough-background-80s-scifi-landscape-in-picture-id1248619427?b=1&k=20&m=1248619427&s=170667a&w=0&h=svQPXt8hCva0D5xKx4l7LHW9v9zjZfBJwfWWWUMvFWw=");
+    
+}
+::placeholder{
+
+    color:#fd0d7d
+}
+aside{
+    padding-right: 27px;
+    padding-top: 26px;
+}

@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+    .navOver{
+        @apply underline underline-offset-2 hover:no-underline
+        hover:transition duration-1000 relative;
+      
+    }
+    .navbgover{
+        @apply absolute left-[20%] -top-2  w-8 h-8 rounded-full -z-10 bg-white
+        transition-all duration-1000;
+    }
+
+}
+
+#navList > li:hover >  a{
+    display:inline-block ;
+    /* visibility: visible; */
+    transition: all 2s;
+    transition-timing-function: ease;
+    background: #0d6efd;
+}
+
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+
+/* animation part */
+#loader
+{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+#loader::before,
+#loader::after
+{
+content: '';
+position: absolute;
+width: inherit;
+height: inherit;
+border-radius: 50%;
+mix-blend-mode: multiply;
+animation:rotate 2s infinite
+cubic-bezier( 0.77, 0, 0.175,1);
+transition: all 5s ease;
+}
+#loader::before
+{
+    background-color: #1f1a1d;
+    animation-delay: .5s;
+    animation-duration: 5s;
+    
+}
+#loader::after
+{
+    background-color: #50e8f3;
+    /* animation-delay: .5s; */
+    animation-duration: 5s;
+    
+}
+@keyframes rotate
+{
+    0%{
+        left: 0;
+    }
+    25%{
+        transform: translateX(40px);
+      
+    }
+    50%
+    {
+        transform: translateX(-40px);
+    }
+    75%
+    {
+        transform: translateX(40px);
+       
+    }
+    100%{
+        transform: translateX(40px);
+    }
+}
+
